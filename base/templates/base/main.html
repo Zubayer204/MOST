@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>MOST - Explore the world of MOSTs!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="{% static 'css/A.animate.css%2bowl.carousel.min.css%2bowl.theme.default.min.css%2bmagnific-popup.css%2bflaticon.css%2bstyle.css%2cMcc.nz9zzkaoXH.css.pagespeed.cf.HVOMWXzxQA.css' %}" />
+    <style>
+      #success-alert {
+        margin-top: 20px;
+      }
+    </style>
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">MOST</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+
+            {% block navli %}
+            {% endblock navli %}
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+
+    <section class="ftco-intro ftco-section bg-light">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+              <h2>Subscribe to our Newsletter</h2>
+              <div class="row justify-content-center">
+                <div class="col-md-5">
+                  <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                      <input type="text" class="form-control" placeholder="Enter email address">
+                      <input type="button" value="Subscribe" class="submit px-3" id="test">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="alert alert-success alert-dismissible fade show" id="success-alert" role="alert">
+              <strong>Congratulations!</strong> You've successfully subscribed to our newletter.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <footer class="ftco-footer">
+        <div class="container">
+          <div class="row mb-5 justify-content-between">
+            <div class="col-sm-12 col-md-4">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2 logo"><a href="#">MOST</a></h2>
+                <p>Interesting articles about the MOSTs in the whole world!</p>
+                <ul class="ftco-footer-social list-unstyled mt-2">
+                  <li class="ftco-animate"><a href="https://github.com/Zubayer204"><span class="fa fa-github"></span></a></li>
+                  <li class="ftco-animate"><a href="https://www.facebook.com/zubayer.rahman.39589/"><span class="fa fa-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="https://instagram.com/zubayer204"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-2">
+              <div class="ftco-footer-widget mb-4 ml-md-4">
+                <h2 class="ftco-heading-2">Info</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+                  <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Career</a></li>
+                  <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Team</a></li>
+                  <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Team</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Have a Questions?</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon fa fa-map marker"></span><span class="text">203 Fake St. Mountain View, San
+                        Francisco, California, USA</span></li>
+                    <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                    <li><a href="mailto:noreply@zubayer.cf"><span class="icon fa fa-paper-plane pr-4"></span><span class="text"><span>noreply@zubayer.cf</span></span></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+          <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+          <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+            stroke="#F96D00" />
+        </svg></div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="{% static 'js/jquery.min.js' %}"></script>
+      <script src="{% static 'js/jquery-migrate-3.0.1.min.js%2bpopper.min.js%2bbootstrap.min.js.pagespeed.jc.U78p8H34ng.js' %}"></script>
+      <script>eval(mod_pagespeed_bbEt9XEkjy);</script>
+      <script>eval(mod_pagespeed_ttrwegP7ZL);</script>
+      <script>eval(mod_pagespeed_dkOdosBF4_);</script>
+      <script
+        src="{% static 'js/jquery.easing.1.3.js%2bjquery.waypoints.min.js%2bjquery.stellar.min.js%2bowl.carousel.min.js.pagespeed.jc.qD8QtIJ2Xe.js' %}"></script>
+      <script>eval(mod_pagespeed_JbqErEkNzA);</script>
+      <script>eval(mod_pagespeed_hrCK0XETWi);</script>
+      <script>eval(mod_pagespeed_zbSqfmeBAp);</script>
+      <script>eval(mod_pagespeed_vhLrnV2Szq);</script>
+      <script
+        src="{% static 'js/jquery.magnific-popup.min.js%2bjquery.animateNumber.min.js%2bscrollax.min.js%2bgoogle-map.js%2bmain.js.pagespeed.jc.YwE2lpoKin.js' %}"></script>
+    <script>eval(mod_pagespeed_sL0dc5He5G);</script>
+    <script>eval(mod_pagespeed_br5mytq7Hs);</script>
+    <script>eval(mod_pagespeed_ZEsMLJdFnw);</script>
+    <script>eval(mod_pagespeed_JFnw5wWI97);</script>
+    <script>eval(mod_pagespeed_9Pnu0vOTRJ);</script>
+
+    <script>
+      $("#success-alert").hide();
+      $("#test").click(function showAlert() {
+          $("#success-alert").fadeTo(3000, 500).slideUp(500, function(){
+        $("#success-alert").slideUp(500);
+          });   
+      });
+    </script>
+
+</body>  
