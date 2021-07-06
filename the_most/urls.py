@@ -24,4 +24,5 @@ urlpatterns = [
     path('', home, name='home'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+    path('api/subscribe/', subscribe, name='subscribe'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

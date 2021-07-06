@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Newsletter(models.Model):
+    ip = models.GenericIPAddressField(null=True, blank=True)
+    email = models.EmailField()
+
+    def __str__(self) -> str:
+        return self.email + "  " + self.ip
