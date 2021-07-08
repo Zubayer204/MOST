@@ -30,7 +30,7 @@ def track_visitor(request):
         user_agent = request.META['HTTP_USER_AGENT']
         referer = request.META['HTTP_REFERER']
         # will have to change in production
-        if "127.0.0.1" in referer:
+        if "127.0.0.1" or "pythonanywhere.com" in referer:
             referer = "/"
         track = Visitor.objects.filter(ip=ip_addr, user_agent=user_agent, referer=referer)
         # print(request.POST)
