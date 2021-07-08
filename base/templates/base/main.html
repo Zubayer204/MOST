@@ -142,31 +142,6 @@
     <script>eval(mod_pagespeed_JFnw5wWI97);</script>
     <script>eval(mod_pagespeed_9Pnu0vOTRJ);</script>
 
-    <script>
-      $("#success-alert").hide();
-      $("#subscribe-form").submit(function (event) {
-        let formData = {
-          csrfmiddlewaretoken: $("input[name='csrfmiddlewaretoken']").val(),
-          email: $("input[name='email']").val()
-        };
-        let url = $("#subscribe-form")[0].action;
-
-        $.ajax({
-          type: 'POST',
-          url: url,
-          data: formData,
-          dataType: 'json',
-          encode: true
-        }).done(function(data) {
-          console.log(data);
-          $("#alert-msg").text(data.msg);
-          $("#success-alert").attr('class', data.style)
-        });
-        $("#success-alert").fadeTo(3000, 500).slideUp(500, function(){
-          $("#success-alert").slideUp(500);
-        });
-        event.preventDefault();  
-      });
-    </script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>  
